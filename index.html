@@ -1,0 +1,1572 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Poomani S</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/x-icon" href="images/poomani.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+      #confettiCanvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+        .skill-image {
+            width: 100%;
+            height: 200px; /* adjust height if needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+    .skill-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* key line */
+    }
+
+    .pricing {
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.pricing:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Default text */
+.pricing p {
+  color: #cfd3ff;
+  line-height: 1.7;
+}
+
+/* Card 1 heading */
+.row.mb-5 > .col-lg-4:nth-child(1) .pricing h3 {
+  color: #00ED64; /* MongoDB green */
+}
+
+/* Card 2 heading */
+.row.mb-5 > .col-lg-4:nth-child(2) .pricing h3 {
+  color: #6c63ff; /* Purple */
+}
+
+/* Card 3 heading */
+.row.mb-5 > .col-lg-4:nth-child(3) .pricing h3 {
+  color: #ffb703; /* Gold */
+}
+
+/* Heading style */
+.pricing h3 {
+  font-weight: 600;
+}
+
+.heading-primary {
+  color: #ff6a00; /* Orange */
+  font-weight: 700;
+}
+
+.heading-secondary {
+  color: #00c6ff; /* Blue */
+  font-weight: 700;
+}
+
+.unit-4 p {
+  color: #cccccc; /* Light text for dark theme */
+}
+
+
+.unit-4 p {
+  color: #9aa0a6; /* dull gray */
+  transition: color 0.3s ease;
+}
+
+.more-content {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Active (on Learn More) */
+.unit-4.active p {
+  color: #000; /* black text */
+}
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  width: 60%;
+  height: 3px;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+
+.section-framework {
+  position: relative;
+  display: inline-block;
+  color: #363c42;
+  font-size: 40px;
+  font-weight: 900;
+
+}
+
+.section-framework::after {
+  content: '';
+  width: 60%;
+  height: 3px;
+  background: #6c63ff;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+
+
+
+/* Desktop boost */
+@media (min-width: 992px) {
+  .laravel-img {
+    max-width: 520px;
+  }
+}
+
+
+#laravel-section {
+  background: linear-gradient(135deg, #17161a, #1716204d, #24243e);
+  padding: 80px 0;
+}
+
+#laravel-section h3,
+#laravel-section p {
+  color: #211313;
+}
+
+.text-primary {
+    color: #a1b7cd !important;
+}
+
+a {
+    color: #04101d;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.project-image-carousel img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain; /* use "cover" if you want cropping */
+}
+
+.map-wrapper iframe {
+  box-shadow: 0 0 35px rgba(34,197,94,0.4);
+}
+
+/* Contact icons uniform size */
+#contact-section img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+/* Center spacing */
+#contact-section .col-md-3 p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hover animation (modern + resume safe) */
+#contact-section .col-md-3:hover img {
+  transform: translateY(-6px) scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(0, 140, 255, 0.7));
+}
+
+/* Text hover sync */
+#contact-section .col-md-3 a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact-section .col-md-3:hover a {
+  color: #007bff;
+}
+
+.social-icon {
+  width: 30px; /* adjust size as needed */
+  height: auto;
+}
+
+
+/* Minimal toast in top-right corner */
+.toast {
+  visibility: hidden;
+  position: fixed;
+  top: 20px;        /* distance from top */
+  right: 20px;      /* distance from right */
+  background-color: #fff; /* white background */
+  color: #333;       /* text color */
+  padding: 12px 20px; /* smaller padding */
+  border-left: 5px solid #4BB543; /* colored accent bar */
+  border-radius: 6px;
+  font-size: 15px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+  opacity: 0;
+  transform: translateX(100%); /* start outside the right */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.toast.show {
+  visibility: visible;
+  transform: translateX(0); /* slide into view */
+  opacity: 1;
+}
+
+a img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+a:hover img {
+  transform: scale(1.1);
+}
+
+
+/* About section background & spacing */
+#about-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f9f9f9, #ffffff);
+}
+
+/* Section title */
+#about-section .section-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+/* Image styling */
+#about-section .circle-bg img {
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#about-section .circle-bg img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading inside content */
+#about-section h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: 0.3px;
+}
+
+/* Paragraph text – stronger & clearer */
+#about-section p {
+  font-size: 16.5px;
+  font-weight: 500; /* not light */
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* Strong text emphasis */
+#about-section p strong {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Skills list */
+#about-section .ul-check li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+/* Custom check icon */
+#about-section .ul-check li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745;
+  font-weight: 700;
+}
+
+/* Smooth appearance */
+#about-section [data-aos] {
+  transition-duration: 0.8s;
+}
+
+
+.text-red {
+  color: #e63946; /* modern red */
+  font-weight: 800; /* strong */
+}
+.vivaha-text {
+  font-weight: 800;
+  background: linear-gradient(90deg, #E19679  0%, #0077FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.odyssey-text {
+  font-weight: 800;
+  background: linear-gradient(90deg, #1e3cff, #00a2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 6px 18px rgba(0, 123, 255, 0.25);
+}
+
+.honor-title {
+    color: #000;
+    font-weight: 700;
+}
+.section-title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.section-title .hrms {
+    color: #0d6efd; /* Logo blue */
+}
+
+.section-title .company {
+    color: #111; /* Dark professional text */
+}
+
+.section-title .internal {
+    color: #0d6efd; /* Same blue as logo */
+}
+
+
+.ingestion-text{
+  font-weight: 800;
+    background: linear-gradient(90deg, #e9ecef 23%, #3986dd 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.center-message {
+  position: fixed;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;              /* 👈 IMPORTANT */
+  justify-content: center;
+  gap: 8px;
+  max-width: 90vw;              /* 👈 prevent overflow */
+  text-align: center;
+
+  font-size: 40px;
+  font-weight: 700;
+  color: #c8bebe;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+
+
+.center-message span {
+  opacity: 0;
+  transform: translateY(40px) scale(0.8);
+  display: inline-block;
+}
+
+
+.center-message.show span {
+  animation: jumpIn 0.9s ease forwards;
+}
+
+.center-message.show span:nth-child(1) { animation-delay: 0s; }
+.center-message.show span:nth-child(2) { animation-delay: 1.6s; }
+.center-message.show span:nth-child(3) { animation-delay: 1.8s; }
+.center-message.show span:nth-child(4) { animation-delay: 1.10s; }
+
+@keyframes jumpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (min-width: 769px) {
+  .center-message span {
+    white-space: nowrap;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .center-message {
+    font-size: 24px;
+    top: 90px;              /* move ABOVE hero text */
+    max-width: 92vw;
+  }
+
+  .center-message span {
+    white-space: normal;   /* 👈 CRITICAL FIX */
+  }
+}
+
+@media (max-width: 420px) {
+  .center-message {
+    font-size: 20px;
+    top: 80px;
+  }
+}
+
+
+
+
+    </style>
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div id="toast" class="toast">Thank you for selecting me!</div>
+      
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="#home-section" class="h2 mb-0">Poomani Sangameswaran<span class="text-primary">.</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a href="#project-section" class="nav-link">Projects</a></li>
+                <li class="has-children">
+                  <a href="#about-section" class="nav-link">Technical Skills</a>
+                  
+                  <ul class="dropdown">
+                    <li><a href="#php-section" class="nav-link">Php</a></li>
+                    <li><a href="#mongodb-section" class="nav-link">MongoDB</a></li>
+                    <li><a href="#sql-section" class="nav-link">My SQL</a></li>
+                    <li class="has-children">
+                      <a href="#">Click More </a>
+                      <ul class="dropdown">
+                        <li><a href="#laravel-section" class="nav-link">Laravel & JQuery / Java Script</a></li>
+                        <li><a href="#about-section" class="nav-link">About Me</a></li>
+                        
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li><a href="#previous-company-section" class="nav-link">Previous Company</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+
+     
+    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
+
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+      
+            <div id="centerMessage" class="center-message">
+              <span>Thank</span>
+              <span>you</span>
+              <span>for</span>
+              <span>choosing me!</span>
+            </div>
+
+            <div class="col-md-8 mt-lg-5 text-center">
+              <h1 class="text-uppercase" data-aos="fade-up">
+                Hi, I’m <span class="text-primary">Poomani</span>
+              </h1>
+      
+              <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+                Laravel & PHP Developer with <strong>4+ years of experience</strong> in building
+                scalable web applications, REST APIs, and high-performance systems using
+                <strong>Laravel, MongoDB, MySQL, and JavaScript</strong>.
+              </p>
+      
+              <div data-aos="fade-up" data-aos-delay="100">
+                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">
+                  Get In Touch
+                </a>
+                <a href="#previous-company-section" class="btn smoothscroll btn-outline-light mb-2">
+                  View Experience
+                </a>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      
+        <a href="#about-section" class="mouse smoothscroll">
+          <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </span>
+        </a>
+      </div>
+      
+
+    
+    <div class="site-section cta-big-image" id="about-section">
+        <div class="container">
+          
+          <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade">
+              <h2 class="section-title mb-3">About Me</h2>
+            </div>
+          </div>
+      
+          <div class="row">
+            
+            <!-- Image -->
+            <div class="col-lg-6 mb-5" data-aos="fade-up">
+              <figure class="circle-bg">
+                <img src="images/hero_1.jpg" alt="About Me" class="img-fluid">
+              </figure>
+            </div>
+      
+            <!-- Content -->
+            <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              
+              <div class="mb-4">
+                <h3 class="h3 mb-4 text-black">Laravel & PHP Developer</h3>
+      
+                <p>
+                  PHP Developer with <strong>4+ years of experience</strong> specializing in 
+                  <strong>Laravel (Frontend & Backend)</strong> development. I have strong expertise 
+                  in building <strong>scalable web applications, REST APIs, and database-driven systems</strong>
+                  using <strong>MongoDB and MySQL</strong>.
+                </p>
+      
+                <p>
+                  I have worked extensively on <strong>OTT platforms, live streaming systems,
+                  ingestion systems, and game-based applications</strong>, delivering high-performance
+                  and reliable solutions.
+                </p>
+      
+                <p>
+                  I am recognized for my <strong>problem-solving skills, performance optimization</strong>,
+                  and <strong>end-to-end project ownership</strong>—from requirement analysis to deployment.
+                </p>
+              </div>
+      
+              <div class="mb-4">
+                <ul class="list-unstyled ul-check success">
+                  <li>Laravel (Frontend & Backend)</li>
+                  <li>MongoDB & MySQL Database Design</li>
+                  <li>REST API & System Architecture</li>
+                  <li>OTT, Live Streaming & Ingestion Systems</li>
+                </ul>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+      <section class="site-section" id="project-section">
+        <div class="container">
+    
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-7 text-center">
+                    <h2 class="section-title mb-3" data-aos="fade-up">My Projects</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">
+                        <strong>Some of the projects I have worked on, showcasing my expertise in <strong>Laravel</strong>, <strong>MongoDB</strong>, and web development.</strong>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row">
+                <!-- Image Carousel -->
+                <div class="col-lg-6 mb-5" data-aos="fade-up">
+                    <div class="owl-carousel slide-one-item-alt project-image-carousel">
+                        <img src="images/vivahalive1.png" alt="VivahaLive" class="img-fluid">
+                        <img src="images/odysseyWebapp.png" alt="OdysseyTV & Olympus" class="img-fluid">
+                        <img src="images/HONOR-LOGO-BLACK-1.png" alt="Honor Contracting" class="img-fluid">
+                        <img src="images/main-logo.webp" alt="HRMS" class="img-fluid">
+                        <img src="images/NXT_Ingestion.png" alt="Ingestion System" class="img-fluid">
+                        <img src="images/logo(2).png" alt="AppVentures Game App" class="img-fluid">
+                    </div>
+                    <div class="custom-direction">
+                        <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a>
+                        <a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
+                    </div>
+                </div>
+    
+                <!-- Project Details Carousel -->
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="owl-carousel slide-one-item-alt-text">
+                    
+                        <!-- VivahaLive -->
+                        <div>
+                            <h2 class="section-title mb-3 vivaha-text">VivahaLive – <strong>Live Streaming Platform</strong></h2>
+                            <p class="lead"><strong>Technologies:</strong> PHP (<strong>Laravel 12</strong>), <strong>MongoDB</strong>, HTML, CSS, jQuery, Firebase, Ant Media Server, OBS</p>
+                            <ul>
+                                <li>Developed a web-based <strong>live streaming platform</strong> similar to YouTube.</li>
+                                <li>Implemented <strong>role-based access</strong> for Users, Partner Admins, and Super Admins.</li>
+                                <li>Integrated <strong>Ant Media Server</strong> for stream key and URL generation.</li>
+                                <li>Used <strong>OBS</strong> to manage live stream start and stop.</li>
+                                <li>Implemented chat, likes, recorded video playback, and <strong>social login</strong> (Google, Facebook, Instagram).</li>
+                            </ul>
+                        </div>
+    
+                        <!-- OdysseyTV Plus & Olympus -->
+                        <div>
+                            <h2 class="section-title mb-3 odyssey-text"><strong>OdysseyTV Plus & Olympus – OTT Platform</strong></h2>
+                            <p class="lead"><strong>Technologies:</strong> PHP (<strong>Laravel</strong>), <strong>MongoDB</strong>, HTML, CSS, JavaScript, jQuery, APIs</p>
+                            <ul>
+                                <li>Developed an <strong>OTT platform</strong> with Admin Web App and User Website, similar to Netflix.</li>
+                                <li>Implemented <strong>subscription management</strong>, package purchases, and promo code campaigns.</li>
+                                <li>Built modules including Dashboard, Channels, Packages, Campaigns, Users, EPG, Reports, Support Requests, and Settings.</li>
+                                <li>Restricted platform access to the Canada region.</li>
+                                <li>Integrated <strong>EPG data</strong> from the Ingestion System using APIs.</li>
+                            </ul>
+                        </div>
+    
+                        <!-- Honor Contracting -->
+                        <div>
+                            <h2 class="section-title mb-3 honor-title"><strong>Honor Contracting</strong></h2>
+                            <p class="lead"><strong>Technologies:</strong> Laravel, MySQL, HTML, CSS, JavaScript, jQuery, AJAX</p>
+                            <ul>
+                                <li>Developed a <strong>role-based web application</strong> for civil project management.</li>
+                                <li>Managed <strong>project, client, and employee tracking</strong> functionalities.</li>
+                            </ul>
+                        </div>
+    
+                        <!-- HRMS -->
+                        <div>
+                            <h2 class="section-title mb-3">
+                                <span class="hrms"><strong>HRMS</strong></span> – 
+                                <span class="internal"><strong>Internal</strong></span>
+                                <span class="company">(<strong>Zaigo Infotech</strong>)</span>
+                            </h2>
+                            <p class="lead"><strong>Technologies:</strong> Laravel, MySQL, HTML, CSS, JavaScript, jQuery, AJAX</p>
+                            <ul>
+                                <li>Built an <strong>internal HR management system</strong> with role-based access.</li>
+                                <li>Implemented <strong>attendance tracking, leave management, task management, payroll reports, asset management, vendor management, and performance reporting</strong>.</li>
+                                <li>Check-in/out based on <strong>location and IP</strong>.</li>
+                            </ul>
+                        </div>
+    
+                        <!-- Ingestion System Web App -->
+                        <div>
+                            <h2 class="section-title mb-3 ingestion-text"><strong>Ingestion System Web App</strong></h2>
+                            <p class="lead"><strong>Technologies:</strong> PHP (<strong>Laravel</strong>), MongoDB, HTML, CSS, JavaScript, jQuery, APIs</p>
+                            <ul>
+                                <li>Centralized <strong>ingestion system</strong> to manage airings data for multiple platforms.</li>
+                                <li>Implemented <strong>XML, FTP, Manual, Auto, and Mail-based ingestion</strong> processes.</li>
+                                <li>Used <strong>Laravel console commands</strong> for automated ingestion.</li>
+                                <li>Implemented <strong>error tracking</strong> and team task creation for failed ingestion files.</li>
+                            </ul>
+                        </div>
+    
+                        <!-- AppVentures Game App -->
+                        <div>
+                            <h2 class="section-title mb-3">AppVentures – <span class="text-red"><strong>Game Application</strong></span></h2>
+                            <p class="lead"><strong>Technologies:</strong> PHP (<strong>Laravel</strong>), MongoDB, HTML, CSS, JavaScript, jQuery, APIs, Firebase</p>
+                            <ul>
+                                <li>Developed an <strong>interactive game application</strong> with Hunts and Races.</li>
+                                <li>Implemented <strong>challenge-based gameplay</strong> with image, voice, and video submissions.</li>
+                                <li>Enabled <strong>group-based gameplay</strong>.</li>
+                                <li>Stored <strong>live gameplay data</strong> in Firebase and migrated completed game data to MongoDB.</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    
+
+
+
+    
+    <section class="site-section border-bottom" id="php-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">PHP</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">I have over <strong> <b>4 years </b></strong> of professional experience working with <strong> <b>PHP </b></strong> and the <strong> <b>Laravel </b></strong> framework.</p>
+          </div>
+        </div>
+        <div class="row">
+          
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure class="skill-image">
+                
+                <img src="images/php.png" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <figure class="skill-image">
+                
+                <img src="images/php1.jpeg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <figure class="skill-image">
+                
+                <img src="images/php2.jpeg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <figure class="skill-image">
+              
+                <img src="images/php3.jpeg" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              
+                <ul class="list-unstyled ul-check success text-left">
+                    <li>4+ years of hands-on experience in PHP and Laravel development</li>
+                    <li>Strong knowledge of MVC architecture and Laravel best practices</li>
+                   
+                  </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+             
+                <ul class="list-unstyled ul-check success text-left">
+                   
+                    <li>Experience building RESTful APIs and backend services</li>
+                    <li>Worked extensively with MongoDB and MySQL databases</li>
+                   
+                  </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+                <ul class="list-unstyled ul-check success text-left">
+                   
+                    
+                    <li>Implemented authentication, authorization, and role-based access control</li>
+                    <li>Optimized application performance and handled large datasets</li>
+                  </ul>
+             
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              
+                <ul class="list-unstyled ul-check success text-left">
+                   
+                    
+                    <li>Experience with AJAX, jQuery, and API integrations</li>
+
+                  </ul>
+            </div>
+          </div>
+
+
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="site-section" id="previous-company-section">
+        <div class="container">
+      
+          <!-- Title -->
+          <div class="row mb-3">
+            <div class="col-12 text-center" data-aos="fade">
+              <h2 class="section-title mb-3">Previous Companies</h2>
+            </div>
+          </div>
+      
+          <!-- Filters -->
+          <div class="row justify-content-center mb-5" data-aos="fade-up">
+            <div id="filters" class="filters text-center button-group col-md-7">
+              <button class="btn btn-primary active" data-filter="*">All</button>
+              <button class="btn btn-primary" data-filter=".zaigo">Zaigo Info Tech</button>
+              <button class="btn btn-primary" data-filter=".webwings">WebWings</button>
+            </div>
+          </div>
+      
+          <!-- Posts -->
+          <div id="posts" class="row">
+      
+            <!-- Zaigo -->
+            <div class="item zaigo col-md-6 mb-4">
+              <div class="company-box">
+                <img src="images/footer-logo.webp" class="img-fluid company-img" alt="Zaigo">
+      
+                <div class="company-content">
+                  <h4>Zaigo Infotech Web Technologies</h4>
+                  <p class="">April 2022 – January 2024</p>
+                  <ul>
+                    <li>Developed web & desktop applications using PHP & Laravel</li>
+                    <li>Improved scalability and performance</li>
+                    <li>Maintained technical documentation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <!-- WebWings -->
+            <div class="item webwings col-md-6 mb-4">
+              <div class="company-box">
+                <img src="images/WGSSiteLogo.png" class="img-fluid company-img" alt="WebWings">
+      
+                <div class="company-content">
+                  <h4>WebWings Global Solutions Pvt. Ltd.</h4>
+                  <p class="">February 2024 – January 2026</p>
+                  <ul>
+                    <li>Built scalable Laravel applications</li>
+                    <li>Developed REST APIs & MongoDB-based systems</li>
+                    <li>Frontend development using JS, jQuery & React</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      
+    <section class="site-section bg-light" id="sql-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade-up">
+            <h2 class="section-title mb-3">My SQL</h2>
+          </div>
+        </div>
+        
+        <div class="row mb-5">
+        
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up">
+            <div class="pricing">
+              <h3 class="text-center h4 mb-3">
+                Real-World MySQL Project Experience
+              </h3>
+        
+              <p class="text-center mt-4">
+                I have over <strong>2 years of professional experience</strong> working with
+                MySQL and PostgreSQL databases in production environments for Laravel applications.
+              </p>
+            </div>
+          </div>
+        
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing">
+              <h3 class="text-center h4 mb-3">
+                Optimized Queries & Performance
+              </h3>
+        
+              <p class="text-center mt-4">
+                Strong experience in writing optimized MySQL queries, including joins,
+                subqueries, indexing, and query optimization for scalable and
+                high-traffic applications.
+              </p>
+            </div>
+          </div>
+        
+          <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing">
+              <h3 class="text-center h4 mb-3">
+                Laravel & MySQL Integration
+              </h3>
+        
+              <p class="text-center mt-4">
+                Hands-on experience integrating MySQL with Laravel using Eloquent ORM,
+                Query Builder, migrations, and database transactions to handle
+                complex business logic efficiently.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+        
+          
+          
+          
+          <div class="mongodb-card">
+
+        <div class="row site-section" id="mongodb-section">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title">MongoDB</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">MongoDB Experience</h3>
+                <p>
+                  I have over <strong>2 years of professional experience</strong> working with MongoDB
+                  in Laravel-based applications, managing large and scalable NoSQL databases.
+                </p>
+              </div>
+              
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Document Modeling & CRUD</h3>
+                <p>
+                  Strong experience in designing MongoDB document schemas and performing
+                  efficient CRUD operations for real-world applications.
+                </p>
+              </div>
+              
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Indexes & Query Optimization</h3>
+                <p>
+                  Experienced in creating indexes, optimizing MongoDB queries, and improving
+                  performance for high-traffic applications.
+                </p>
+              </div>
+              
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Aggregation Pipelines</h3>
+                <p>
+                  Hands-on experience with MongoDB aggregation pipelines for data filtering,
+                  grouping, reporting, and analytics.
+                </p>
+              </div>
+              
+          </div>
+          <div class="col-lg-6">
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Laravel + MongoDB Integration</h3>
+                <p>
+                  Integrated MongoDB with Laravel applications using custom models, repositories,
+                  and service layers to handle complex business logic.
+                </p>
+              </div>
+              
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Working with ObjectId & BSON</h3>
+                <p>
+                  Experienced in handling MongoDB ObjectId, BSON data types, and date-time
+                  conversions within Laravel applications.
+                </p>
+              </div>
+              
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Bulk Operations & Data Migration</h3>
+                <p>
+                  Performed bulk inserts, updates, and data migrations while maintaining
+                  data consistency and performance.
+                </p>
+              </div>
+              
+              <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-black h4 mb-4">Scalable NoSQL Architecture</h3>
+                <p>
+                  Designed scalable MongoDB architectures to support high-volume data and
+                  real-time application requirements.
+                </p>
+              </div>
+              
+            
+          </div>
+        </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="laravel-section">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                  <h2 class="section-framework">Laravel Framework</h2>
+                </div>
+              </div>
+
+              
+          <div class="row mb-5">
+      
+            <!-- Image -->
+            <div class="col-lg-5 ml-auto mb-5 order-1 order-lg-2" data-aos="fade-up">
+              <img src="images/laravel-framework.png" alt="Laravel Developer" class="img-fluid rounded laravel-img">
+            </div>
+      
+            <!-- Content -->
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade">
+              <div class="row">
+      
+                <!-- Block 1 -->
+                <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up">
+                    <div class="unit-4">
+                      <div class="unit-4-icon mr-4 mb-3">
+                        <span class="text-primary flaticon-head"></span>
+                      </div>
+                      <div>
+                        <h3 class="heading-primary">Laravel Framework Expert</h3>
+                        <p>
+                          4+ years of experience building scalable web applications using 
+                          <strong>Laravel</strong>, REST APIs, authentication systems, queues, and MVC architecture.
+                        </p>
+                  
+                        <!-- Hidden Content -->
+                        <div class="more-content">
+                          <p>
+                            Experienced in Laravel authentication (Sanctum & Passport), 
+                            job queues, cron jobs, role-based access control, 
+                            API integrations, performance optimization, and clean architecture.
+                          </p>
+                        </div>
+                  
+                        <p class="mb-0">
+                          <a href="javascript:void(0)" class="learn-more-btn">Learn More</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+      
+                <!-- Block 2 -->
+                <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4">
+                      <div class="unit-4-icon mr-4 mb-3">
+                        <span class="text-primary flaticon-smartphone"></span>
+                      </div>
+                      <div>
+                        <h3 class="heading-secondary">jQuery, JavaScript & Databases</h3>
+                        <p>
+                          Strong experience in <strong>jQuery</strong>, <strong>JavaScript</strong>, 
+                          <strong>SQL</strong>, and <strong>MongoDB</strong> for dynamic UI and backend systems.
+                        </p>
+                  
+                        <!-- Hidden Content -->
+                        <div class="more-content">
+                          <p>
+                            Hands-on experience with AJAX, DataTables, form validations, 
+                            MongoDB aggregation pipelines, MySQL query optimization,
+                            and real-time UI updates.
+                          </p>
+                        </div>
+                  
+                        <p class="mb-0">
+                          <a href="javascript:void(0)" class="learn-more-btn">Learn More</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+      
+              </div>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+      
+  
+    
+
+   
+
+
+    <section class="site-section bg-light" id="contact-section" data-aos="fade">
+      <div class="container">
+    
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Contact Me</h2>
+          </div>
+        </div>
+    
+        <div class="row mb-5">
+    
+          <!-- Location -->
+          <div class="col-md-3 text-center">
+            <p class="mb-4">
+              <a href="https://www.google.com/maps?q=Namakkal,Tamil%20Nadu,India"
+                 target="_blank"
+                 class="map-link">
+                <span class="d-block h4 text-primary">
+                  <img src="images/maps.png" alt="Map">
+                </span>
+                Namakkal, Tamil Nadu, India
+              </a>
+            </p>
+          </div>
+          
+    
+          <!-- Phone -->
+          <div class="col-md-3 text-center">
+            <p class="mb-4">
+              <a href="tel:+919578777149">
+                <span class="d-block h4 text-primary">
+                  <img src="images/phone.png" alt="Phone">
+                </span>
+                +91 95787 77149
+              </a>
+            </p>
+          </div>
+          
+    
+          <!-- Email -->
+          <div class="col-md-3 text-center">
+            <p class="mb-4">
+              <a href="mailto:spoomani21@gmail.com">
+                <span class="d-block h4 text-primary">
+                  <img src="images/email.jpeg" alt="Email">
+                </span>
+                spoomani21@gmail.com
+              </a>
+            </p>
+          </div>
+          
+    
+          <!-- LinkedIn -->
+          <div class="col-md-3 text-center">
+            <p class="mb-4">
+              <a href="https://www.linkedin.com/in/s-poomani-6654182a9/" target="_blank">
+                <span class="d-block h4 text-primary">
+                  <img src="images/linkedin.png" alt="LinkedIn">
+                </span>
+                LinkedIn Profile
+              </a>
+            </p>
+          </div>
+          
+    
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps?q=Namakkal,Tamil%20Nadu&output=embed"
+                width="100%"
+                height="350"
+                style="border:0;border-radius:16px;filter: grayscale(20%) contrast(1.1);"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        
+    
+        <div class="row">
+          <div class="col-md-12 mb-5">
+    
+            <form id="contactForm" class="p-5 bg-white">
+              <h2 class="h4 text-black mb-5">My Contact Form</h2> 
+            
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" value="Poomani" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" value="Sangameswaran" class="form-control">
+                </div>
+              </div>
+            
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" id="email" value="spoomani21@gmail.com" class="form-control">
+                </div>
+              </div>
+            
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label> 
+                  <input type="text" id="subject" value="Application for Software Engineer – Interview Request" class="form-control">
+                </div>
+              </div>
+            
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label> 
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    class="form-control"
+                  >Dear HR,
+              
+              I hope this resume finds you well. I am writing to express my interest in the Software Engineer position at Your Company. I would be grateful for the opportunity to discuss my qualifications and experiences in an interview at your convenience.
+              
+              Thank you for considering my application. I look forward to hearing from you.
+              
+              Best regards,
+              Poomani Sangameswaran</textarea>
+                </div>
+              </div>
+              
+            
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input
+                    type="submit"
+                    value="Click Here"
+                    class="btn btn-primary btn-md text-white"
+                  >
+                </div>
+              </div>
+            </form>
+            
+    
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    <canvas id="confettiCanvas"></canvas>
+
+    
+    
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+    
+              <!-- Declaration -->
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">Declaration</h2>
+                <p>
+                  I hereby declare that the information furnished above is true and
+                  correct to the best of my knowledge.
+                </p>
+              </div>
+    
+              <!-- Quick Links -->
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#about-section" class="smoothscroll">About Me</a></li>
+                  <li><a href="#contact-section" class="smoothscroll">Contact Me</a></li>
+                </ul>
+              </div>
+    
+             
+              <!-- Follow Us -->
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Me</h2>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/s-poomani-6654182a9/"
+                  target="_blank"
+                  class="pl-0 pr-3">
+                  <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+              </div>
+
+    
+            </div>
+          </div>
+    
+          <!-- Email (instead of Subscribe Newsletter) -->
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Email</h2>
+            <p class="mb-2">
+              <a href="mailto:spoomani21@gmail.com">
+                spoomani21@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+    
+        <!-- Footer bottom -->
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-4">
+              <p>
+                © <script>document.write(new Date().getFullYear());</script>
+                Poomani S — All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </footer>
+    
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+
+  
+  <script src="js/main.js"></script>
+    
+  <script>
+    $(document).on('click', '.learn-more-btn', function () {
+        const $btn = $(this);
+        const $unit = $btn.closest('.unit-4');
+        const $content = $unit.find('.more-content');
+    
+        $content.slideToggle(300);
+        $unit.toggleClass('active');
+    
+        $btn.text(
+            $btn.text() === 'Learn More' ? 'Show Less' : 'Learn More'
+        );
+    });
+
+
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+        
+          // Show all by default
+          $('.item').fadeIn();
+        
+          $('#filters button').click(function () {
+            $('#filters button').removeClass('active');
+            $(this).addClass('active');
+        
+            let filterValue = $(this).attr('data-filter');
+        
+            if (filterValue === '*') {
+              $('.item').fadeIn();
+            } else {
+              $('.item').hide();
+              $(filterValue).fadeIn();
+            }
+          });
+        
+        });
+        </script>
+        <script>
+          document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // prevent page refresh
+
+            const formData = {
+              firstName: document.getElementById("fname").value,
+              lastName: document.getElementById("lname").value,
+              email: document.getElementById("email").value,
+              subject: document.getElementById("subject").value,
+              message: document.getElementById("message").value,
+            };
+
+            console.log("Form Data:", formData);
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Show toast
+            const toast = document.getElementById("toast");
+            toast.classList.add("show");
+
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+
+            this.reset();
+            showCenterMessage();
+            launchConfetti()
+          });
+        </script>
+
+<script>
+  const canvas = document.getElementById("confettiCanvas");
+  const ctx = canvas.getContext("2d");
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  let confetti = [];
+  
+  function createConfetti() {
+    confetti = [];
+    for (let i = 0; i < 150; i++) {
+      confetti.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height - canvas.height,
+        r: Math.random() * 6 + 4,
+        d: Math.random() * 20,
+        color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+        tilt: Math.random() * 10 - 10
+      });
+    }
+  }
+  
+  function drawConfetti() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    confetti.forEach((c, i) => {
+      ctx.beginPath();
+      ctx.fillStyle = c.color;
+      ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+      ctx.fill();
+  
+      c.y += Math.cos(c.d) + 3;
+      c.x += Math.sin(c.d);
+    });
+  
+    requestAnimationFrame(drawConfetti);
+  }
+  
+  function launchConfetti() {
+    createConfetti();
+    drawConfetti();
+  
+    setTimeout(() => {
+      confetti = [];
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, 10000);
+  }
+  </script>
+  
+ <script>
+  showCenterMessage()
+  launchConfetti()
+function showCenterMessage() {
+  const msg = document.getElementById("centerMessage");
+  const words = msg.querySelectorAll("span");
+
+  // Reset state
+  msg.classList.remove("show");
+  words.forEach(word => {
+    word.style.animation = "none";
+  });
+
+  // Force reflow (this is the magic ✨)
+  void msg.offsetWidth;
+
+  // Re-apply animation
+  msg.classList.add("show");
+  words.forEach(word => {
+    word.style.animation = "";
+  });
+
+  // Hide after 9 seconds
+  setTimeout(() => {
+    msg.classList.remove("show");
+  }, 9000);
+}
+window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+</script>
+
+    
+
+  </body>
+</html>
