@@ -446,30 +446,42 @@ a:hover img {
 /* DESKTOP ONLY */
 /* ===================== */
 @media (min-width: 769px) {
+  .center-message {
+    position: fixed;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .center-message span {
     white-space: nowrap;
   }
 }
+
 
 /* ===================== */
 /* MOBILE & TABLET */
 /* ===================== */
 @media (max-width: 768px) {
   .center-message {
-    position: relative;        /* 🔥 KEY FIX */
-    top: 0;
-    left: 0;
+    position: relative;      /* leaves header */
+    top: auto;
+    left: auto;
     transform: none;
 
-    margin: 60px auto 20px;    /* space from top */
+    margin-top: 120px;       /* ⬅ BELOW NAVBAR */
+    margin-bottom: 10px;
+
     font-size: 24px;
     max-width: 92vw;
+    z-index: 1;
   }
 
   .center-message span {
     white-space: normal;
   }
 }
+
 
 /* EXTRA SMALL DEVICES */
 @media (max-width: 420px) {
